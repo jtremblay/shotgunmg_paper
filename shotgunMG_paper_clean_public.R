@@ -27,8 +27,10 @@ library(dendextend)
 # which comes from rocky environment.
 
 # Define the directory where the zenodo archive has been downloaded and extracted.
-# Change the following directory path to where the extracted zenodo archive lives:
-setwd("/fs/vnas_Hnrc/eme/jut001/work/projects/shotgunMG/china_microbiome/")
+# Change the following directory path to where the extracted zenodo archive lives. Once
+# uncompressed, folder with human gut microbiome files has to be labelled human_gut_microbiome/ and 
+# the folder with the antarctic microbbiome files has to be labeled antarctic_microbiome/.
+setwd("/path/to/my/output_files/")
 # Set directory where output files will be written.
 # The script expect the two R code files (shotgunMG_"paper_clean.R and shotgunMG_utils.R to be located in this directory)
 root = "~/projects/shotgunMG_paper/"
@@ -93,7 +95,7 @@ source(paste0(root, "./shotgunMG_utils.R"))
 # key metrics in assembly stats      #
 # FIGURE S1                          #
 ######################################
-mapping_file  = "./mapping_file.tsv"
+mapping_file  = "./human_gut_microbiome/mapping_file.tsv"
 mapping = data.frame(fread(mapping_file), check.names=FALSE)
 row.names(mapping) = mapping$`#SampleID`
 head(mapping)
@@ -130,7 +132,7 @@ df_stats_melted_1 = rbind(df_stats_melted_1, tmp)
 df_stats_melted_china = df_stats_melted_1
 
 # Rock/Antarctic microbiome
-df_stats = data.frame(fread("../rock_microbiome/assembly_stats.csv", sep="\t", quote=FALSE), check.names=F)
+df_stats = data.frame(fread("./antarctic_microbiome/assembly_stats.csv", sep="\t", quote=FALSE), check.names=F)
 df_stats$`mem (GB)` = as.numeric(gsub(",", "", df_stats$`mem (GB)`))
 df_stats$`Number of bases (Gb)` = as.numeric(gsub(",", "", df_stats$`Number of bases (Gb)`))
 df_stats$N50 = as.numeric(gsub(",", "", df_stats$N50))
@@ -218,7 +220,7 @@ df_stats_melted_1$Dataset = "Human gut"
 df_stats_melted_china = df_stats_melted_1
 
 # Rock/Antarctic microbiome
-df_stats = data.frame(fread("../rock_microbiome/assembly_stats.csv", sep="\t", quote=FALSE), check.names=F)
+df_stats = data.frame(fread("./antarctic_microbiome/assembly_stats.csv", sep="\t", quote=FALSE), check.names=F)
 df_stats$`mem (GB)` = as.numeric(gsub(",", "", df_stats$`mem (GB)`))
 df_stats$`Number of bases (Gb)` = as.numeric(gsub(",", "", df_stats$`Number of bases (Gb)`))
 df_stats$N50 = as.numeric(gsub(",", "", df_stats$N50))
@@ -762,7 +764,7 @@ for(i in 1:length(my_workflows)){
 #########################################
 # Do PCoA plots for Antarctic microbiome
 
-mapping = data.frame(fread("../rock_microbiome/0.1M_clusters/mapping_file.tsv", sep="\t"), check.names=FALSE)
+mapping = data.frame(fread("./antarctic_microbiome/0.1M_clusters/mapping_file.tsv", sep="\t"), check.names=FALSE)
 
 # Beta div
 df_coords = get_coords_as_df(my_coords_files_rock)
@@ -1022,7 +1024,7 @@ p_alpha2
 #################################
 # Rock microbiome alpha div 
 
-mapping_rock = data.frame(fread("../rock_microbiome/0.1M_clusters/mapping_file.tsv"), check.names=FALSE)
+mapping_rock = data.frame(fread("./antarctic_microbiome/0.1M_clusters/mapping_file.tsv"), check.names=FALSE)
 row.names(mapping_rock) = mapping_rock$`#SampleID`
 df_alpha = get_alphadiv_as_df(my_alpha_div_contigs_files_rock, mapping=mapping_rock)
 
@@ -1190,10 +1192,10 @@ dev.off()
 # so we can get nice summarized profiles to compare.                      #
 # Figure S3                                                               #
 ###########################################################################
-df_tax_counts = get_tax_as_df_unmelted(my_tax_files_china_counts, mapping_file="./mapping_file.tsv")
-df_tax =        get_tax_as_df_unmelted(my_tax_files_china_counts, convert_to_rel=TRUE, mapping_file="./mapping_file.tsv")
+df_tax_counts = get_tax_as_df_unmelted(my_tax_files_china_counts, mapping_file="./human_gut_microbiome/mapping_file.tsv")
+df_tax =        get_tax_as_df_unmelted(my_tax_files_china_counts, convert_to_rel=TRUE, mapping_file="./human_gut_microbiome/mapping_file.tsv")
 
-mapping = data.frame(fread("./mapping_file.tsv"), check.names=FALSE)
+mapping = data.frame(fread("./human_gut_microbiome/mapping_file.tsv"), check.names=FALSE)
 
 taxa = unique(df_tax$Taxon)
 taxa = taxa[taxa != "NULL"]
@@ -1476,10 +1478,10 @@ tab2_tax_china = tab2
 #  Rock/Antarctic microbiome TAXONOMY     #
 ###########################################
 
-df_tax_counts = get_tax_as_df_unmelted(my_tax_files_rock_counts, mapping_file="../rock_microbiome/export/mapping_file.tsv")
-df_tax =        get_tax_as_df_unmelted(my_tax_files_rock_counts, convert_to_rel=TRUE, mapping_file="../rock_microbiome/export/mapping_file.tsv")
+df_tax_counts = get_tax_as_df_unmelted(my_tax_files_rock_counts, mapping_file="./antarctic_microbiome/export/mapping_file.tsv")
+df_tax =        get_tax_as_df_unmelted(my_tax_files_rock_counts, convert_to_rel=TRUE, mapping_file="./antarctic_microbiome/export/mapping_file.tsv")
 
-mapping = data.frame(fread("../rock_microbiome/export/mapping_file.tsv"), check.names=FALSE)
+mapping = data.frame(fread("./antarctic_microbiome/export/mapping_file.tsv"), check.names=FALSE)
 
 taxa = unique(df_tax$Taxon)
 taxa = taxa[taxa != "NULL"]
@@ -1732,7 +1734,7 @@ groupE = venn_data2[venn_data2$count == 459,]$item
 groupF = venn_data2[venn_data2$count == 933,]$item
 groupG = venn_data2[venn_data2$count == 386,]$item
 
-abundance = data.frame(fread("../rock_microbiome/export/all_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv"), check.names=FALSE)
+abundance = data.frame(fread("./antarctic_microbiome/export/all_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv"), check.names=FALSE)
 
 groups = c(groupA,groupB,groupC,groupD,groupE,groupF, groupG)
 
@@ -2061,13 +2063,13 @@ dev.off()
 ############## CHINA KO ######################
 # Normalize with recA (from COG annotations) #
 ##############################################
-#df_KO_all = get_KO_abundance_as_df(my_KO_files_china, my_gene_abundance_files_china, my_COG_files_china, mapping_file="./mapping_file.tsv")
+#df_KO_all = get_KO_abundance_as_df(my_KO_files_china, my_gene_abundance_files_china, my_COG_files_china, mapping_file="./human_gut_microbiome/mapping_file.tsv")
 # write file because long to load...
 #fwrite(df_KO_all, paste0(outdir, "./df_KO_china.tsv"), sep="\t", row.names=TRUE)
 df_KO_all = data.frame(fread(paste0(outdir, "./df_KO_china.tsv"), sep="\t", header=TRUE), check.names=TRUE); row.names(df_KO_all) = df_KO_all$V1; df_KO_all$V1=NULL;
 head(df_KO_all)
 
-mapping = data.frame(fread("./mapping_file.tsv"), check.names=FALSE)
+mapping = data.frame(fread("./human_gut_microbiome/mapping_file.tsv"), check.names=FALSE)
 
 KOs = unique(df_KO_all$KO)
 KOs = KOs[KOs != "NULL"]
@@ -2356,13 +2358,13 @@ tab2_china = tab2
 # Normalize with recA (from COG annotations)   #
 ################################################
 
-#df_KO_all = get_KO_abundance_as_df(my_KO_files_rock, my_gene_abundance_files_rock, my_COG_files_rock, mapping_file="../rock_microbiome/export/mapping_file.tsv")
+#df_KO_all = get_KO_abundance_as_df(my_KO_files_rock, my_gene_abundance_files_rock, my_COG_files_rock, mapping_file="./antarctic_microbiome/export/mapping_file.tsv")
 #fwrite(df_KO_all, paste0(outdir, "./df_KO_rock.tsv"), sep="\t", row.names=TRUE)
 df_KO_all = data.frame(fread(paste0(outdir, "./df_KO_rock.tsv"), sep="\t", header=TRUE), check.names=TRUE); row.names(df_KO_all) = df_KO_all$V1; df_KO_all$V1=NULL;
 
 head(df_KO_all)
 
-mapping = data.frame(fread("../rock_microbiome/export/mapping_file.tsv"), check.names=FALSE)
+mapping = data.frame(fread("./antarctic_microbiome/export/mapping_file.tsv"), check.names=FALSE)
 
 KOs = unique(df_KO_all$KO)
 KOs = KOs[KOs != "NULL"]
@@ -2789,7 +2791,7 @@ mapping = data.frame(fread("./mapping_file3.tsv", sep="\t"), check.names=FALSE)
 df_coords = get_coords_as_df(my_coords_files)
 df_alpha = get_alphadiv_as_df(my_alpha_div_genes_files, mapping=mapping)
 # include taxa profile stacked bar plots based on alpha diversity quintiles.
-df_taxa = get_tax_as_df_unmelted(my_tax_files_china_species, convert_to_rel=FALSE, mapping_file="./mapping_file.tsv")
+df_taxa = get_tax_as_df_unmelted(my_tax_files_china_species, convert_to_rel=FALSE, mapping_file="./human_gut_microbiome/mapping_file.tsv")
 
 selected_taxa = c(
   "g__Coprococcus$",
@@ -3017,7 +3019,7 @@ p_selected_tax_china
 #################################
 ## Antarctic                    #
 #################################
-mapping = data.frame(fread("../rock_microbiome/0.1M_clusters/mapping_file.tsv", sep="\t"), check.names=FALSE)
+mapping = data.frame(fread("./antarctic_microbiome/0.1M_clusters/mapping_file.tsv", sep="\t"), check.names=FALSE)
 mapping$Location = gsub(".nord", "", mapping$Treatment)
 mapping$Location = gsub(".sud", "", mapping$Location)
 
@@ -3028,7 +3030,7 @@ mapping$Location = gsub(".sud", "", mapping$Location)
 df_coords = get_coords_as_df(my_coords_files_rock)
 df_alpha = get_alphadiv_as_df(my_alpha_div_genes_files_rock, mapping=mapping)
 # include taxa profile stacked bar plots based on alpha diversity quintiles.
-df_taxa = get_tax_as_df_unmelted(my_tax_files_rock_species, convert_to_rel=FALSE, mapping_file="../rock_microbiome/0.1M_clusters/mapping_file.tsv")
+df_taxa = get_tax_as_df_unmelted(my_tax_files_rock_species, convert_to_rel=FALSE, mapping_file="./antarctic_microbiome/0.1M_clusters/mapping_file.tsv")
 
 # Keep most abundant 20 taxa.
 df_taxa2 = melt(df_taxa)
@@ -3218,7 +3220,7 @@ p_selected_tax_rock
 #df_KO = get_KO_abundance_as_df(my_KO_files_china, my_gene_abundance_files_china, my_COG_files_china, mapping_file)
 df_KO = data.frame(fread(paste0(outdir, "./df_KO_china.tsv"), sep="\t", header=TRUE), check.names=TRUE); row.names(df_KO) = df_KO$V1; df_KO$V1=NULL;
 head(df_KO)
-mapping = data.frame(fread("./mapping_file.tsv"), check.names=FALSE)
+mapping = data.frame(fread("./human_gut_microbiome/mapping_file.tsv"), check.names=FALSE)
 
 my_workflows = unique(df_KO$Type)
 ps_ko = list()
@@ -3487,7 +3489,7 @@ p_KO_china_3
 #df_KO = get_KO_abundance_as_df(my_KO_files_china, my_gene_abundance_files_china, my_COG_files_china, mapping_file)
 df_KO = data.frame(fread(paste0(outdir, "./df_KO_rock.tsv"), sep="\t", header=TRUE), check.names=TRUE); row.names(df_KO) = df_KO$V1; df_KO$V1=NULL;
 head(df_KO)
-mapping = data.frame(fread("../rock_microbiome/0.1M_clusters/mapping_file.tsv"), check.names=FALSE)
+mapping = data.frame(fread("./antarctic_microbiome/0.1M_clusters/mapping_file.tsv"), check.names=FALSE)
 mapping$Location = gsub(".nord", "", mapping$Treatment)
 mapping$Location = gsub(".sud", "", mapping$Location)
 mapping = mapping[mapping$Location %in% c("Siegfried.Peak", "University.Valley"),]

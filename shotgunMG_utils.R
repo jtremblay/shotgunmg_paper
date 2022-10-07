@@ -77,498 +77,1701 @@ vColors2 = c(
 # used to generate figures.                           #
 #######################################################
 
+## QC files.
 my_qc_files_china = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/contig_abundance/qc_mapping_stats.tsv"
+  "0.1M" = "./export/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M" = "./export/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M" = "./export/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M" = "./export/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "8M" = "./export/8M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "12M" = "./export/12M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/contig_abundance/qc_mapping_stats.tsv"
 )
 
 my_qc_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/contig_abundance/qc_mapping_stats.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/contig_abundance/qc_mapping_stats.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/contig_abundance/qc_mapping_stats.tsv"
 )
 
+my_qc_files_mock = c(
+  "0.1M" = "../mock/export/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M" = "../mock/export/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "2M" = "../mock/export/2M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "3M" = "../mock/export/3M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M" = "../mock/export/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "complete" = "../mock/export/all_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/contig_abundance/qc_mapping_stats.tsv"
+)
+
+my_qc_files_mock_even = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M" = "../mock_even/export/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "2M" = "../mock_even/export/2M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "3M" = "../mock_even/export/3M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M" = "../mock_even/export/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "complete" = "../mock_even/export/all_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/contig_abundance/qc_mapping_stats.tsv"
+)
+
+my_qc_files_mock_staggered = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/contig_abundance/qc_mapping_stats.tsv"
+)
+
+my_qc_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M" = "../soil/export/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M" = "../soil/export/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "8M" = "../soil/export/8M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "12M" = "../soil/export/12M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "complete" = "../soil/export/all_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/contig_abundance/qc_mapping_stats.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/contig_abundance/qc_mapping_stats.tsv"
+)
+
+## Coords files contigs
 my_coords_files = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv"
+  "0.1M" = "./export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M" = "./export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M" = "./export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M" = "./export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "8M" = "./export/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "12M" = "./export/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv"
 )
+
 my_coords_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv"
 )
+
+my_coords_files_mock = c(
+  "0.1M" = "../mock/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M" = "../mock/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "2M" = "../mock/export/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "3M" = "../mock/export/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M" = "../mock/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "complete" = "../mock/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv"
+)
+
+my_coords_files_mock_even = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M" = "../mock_even/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "2M" = "../mock_even/export/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "3M" = "../mock_even/export/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M" = "../mock_even/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "complete" = "../mock_even/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv"
+)
+
+my_coords_files_mock_staggered = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv"
+)
+
+my_coords_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M" = "../soil/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M" = "../soil/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "8M" = "../soil/export/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "12M" = "../soil/export/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "complete" = "../soil/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance_coords.tsv"
+)
+
+## Coords files genes
+my_coords_files_genes = c(
+  "0.1M" = "./export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M" = "./export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M" = "./export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M" = "./export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "8M" = "./export/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "12M" = "./export/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv"
+)
+
+my_coords_files_rock_genes = c(
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv"
+)
+
+my_coords_files_mock_genes = c(
+  "0.1M" = "../mock/export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M" = "../mock/export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "2M" = "../mock/export/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "3M" = "../mock/export/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M" = "../mock/export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "complete" = "../mock/export/all_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv"
+)
+
+my_coords_files_mock_even_genes = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M" = "../mock_even/export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "2M" = "../mock_even/export/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "3M" = "../mock_even/export/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M" = "../mock_even/export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "complete" = "../mock_even/export/all_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv"
+)
+
+my_coords_files_mock_staggered_genes = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv"
+)
+
+my_coords_files_soil_genes = c(
+  "0.1M" = "../soil/export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M" = "../soil/export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M" = "../soil/export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "8M" = "../soil/export/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "12M" = "../soil/export/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "complete" = "../soil/export/all_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance_coords.tsv"
+)
+
+# Dist files
 my_dist_files = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv"
+  "0.1M" = "./export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M" = "./export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M" = "./export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M" = "./export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "8M" = "./export/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "12M" = "./export/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv"
 )
+
 my_dist_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv"
 )
 
-# Alpha richness
+my_dist_files_mock = c(
+  "0.1M" =     "../mock/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M" =     "../mock/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M" =       "../mock/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "2M" =       "../mock/export/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "3M" =       "../mock/export/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M" =       "../mock/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "complete" = "../mock/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M_all" =   "../mock/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "2M_all" =   "../mock/export/map_all_reads/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "3M_all" =   "../mock/export/map_all_reads/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M_all" =   "../mock/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv"
+)
+
+my_dist_files_mock_even = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M" = "../mock_even/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "2M" = "../mock_even/export/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "3M" = "../mock_even/export/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M" = "../mock_even/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "complete" = "../mock_even/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv"
+)
+
+my_dist_files_mock_staggered = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv"
+)
+
+my_dist_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M" = "../soil/export/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M" = "../soil/export/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "8M" = "../soil/export/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "12M" = "../soil/export/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "complete" = "../soil/export/all_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/beta_div/bray_curtis_contig_abundance/bray_curtis_contig_abundance.tsv"
+)
+
+# dist files genes
+my_dist_files_genes = c(
+  "0.1M" = "./export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M" = "./export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M" = "./export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M" = "./export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "8M" = "./export/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "12M" = "./export/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv"
+)
+
+my_dist_files_rock_genes = c(
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv"
+)
+
+my_dist_files_mock_genes = c(
+  "0.1M" =     "../mock/export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M" =     "../mock/export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M" =       "../mock/export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "2M" =       "../mock/export/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "3M" =       "../mock/export/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M" =       "../mock/export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "complete" = "../mock/export/all_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M_all"   = "../mock/export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "2M_all"   = "../mock/export/map_all_reads/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "3M_all"   = "../mock/export/map_all_reads/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M_all"   = "../mock/export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv"
+)
+
+my_dist_files_mock_even_genes = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M" = "../mock_even/export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "2M" = "../mock_even/export/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "3M" = "../mock_even/export/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M" = "../mock_even/export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "complete" = "../mock_even/export/all_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv"
+)
+
+my_dist_files_mock_staggered_genes = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv"
+)
+
+my_dist_files_soil_genes = c(
+  "0.1M" = "../soil/export/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M" = "../soil/export/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M" = "../soil/export/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "8M" = "../soil/export/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "12M" = "../soil/export/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "complete" = "../soil/export/all_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/beta_div/bray_curtis_gene_abundance/bray_curtis_gene_abundance.tsv"
+)
+
+# Alpha richness contigs
 my_alpha_div_contigs_files = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/alpha_div/contig_abundance/alpha_richness.tsv"
-)
-
-my_alpha_div_genes_files = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/alpha_div/gene_abundance/alpha_richness.tsv"
+  "0.1M" = "./export/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M" = "./export/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M" = "./export/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M" = "./export/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "8M" = "./export/8M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "12M" = "./export/12M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/alpha_div/contig_abundance/alpha_richness.tsv"
 )
 
 my_alpha_div_contigs_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/alpha_div/contig_abundance/alpha_richness.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/alpha_div/contig_abundance/alpha_richness.tsv"
+)
+
+my_alpha_div_contigs_files_mock = c(
+  "0.1M" = "../mock/export/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M" = "../mock/export/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "2M" = "../mock/export/2M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "3M" = "../mock/export/3M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M" = "../mock/export/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "complete" = "../mock/export/all_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv"
+)
+
+my_alpha_div_contigs_files_mock_even = c(
+  "0.1M" = "../moc_even/export/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M" = "../mock_even/export/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "2M" = "../mock_even/export/2M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "3M" = "../mock_even/export/3M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M" = "../mock_even/export/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "complete" = "../mock_even/export/all_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M_all" = "../mock/export_even/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "2M_all" = "../mock/export_even/map_all_reads/2M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "3M_all" = "../mock/export_even/map_all_reads/3M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M_all" = "../mock/export_even/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv"
+)
+
+my_alpha_div_contigs_files_mock_staggered = c(
+  "0.1M" = "../moc_staggered/export/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M_all" = "../mock/export_staggered/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "2M_all" = "../mock/export_staggered/map_all_reads/2M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "3M_all" = "../mock/export_staggered/map_all_reads/3M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M_all" = "../mock/export_staggered/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv"
+)
+
+my_alpha_div_contigs_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M" = "../soil/export/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M" = "../soil/export/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "8M" = "../soil/export/8M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "12M" = "../soil/export/12M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "complete" = "../soil/export/all_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/alpha_div/contig_abundance/alpha_richness.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/alpha_div/contig_abundance/alpha_richness.tsv"
+)
+
+# alpha richness genes
+my_alpha_div_genes_files = c(
+  "0.1M" = "./export/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M" = "./export/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M" = "./export/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M" = "./export/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "8M" = "./export/8M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "12M" = "./export/12M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/alpha_div/gene_abundance/alpha_richness.tsv"
 )
 
 my_alpha_div_genes_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/alpha_div/gene_abundance/alpha_richness.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/alpha_div/gene_abundance/alpha_richness.tsv"
 )
 
-# Alpha chao1
-my_alpha_chao1_div_contigs_files = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv"
+my_alpha_div_genes_files_mock = c(
+  "0.1M" = "../mock/export/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M" = "../mock/export/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "2M" = "../mock/export/2M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "3M" = "../mock/export/3M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M" = "../mock/export/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "complete" = "../mock/export/all_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv"
 )
 
-my_alpha_chao1_div_genes_files = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv"
+my_alpha_div_genes_files_mock_even = c(
+  "0.1M" = "../moc_even/export/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M" = "../mock_even/export/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "2M" = "../mock_even/export/2M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "3M" = "../mock_even/export/3M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M" = "../mock_even/export/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "complete" = "../mock_even/export/all_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M_all" = "../mock/export_even/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "2M_all" = "../mock/export_even/map_all_reads/2M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "3M_all" = "../mock/export_even/map_all_reads/3M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M_all" = "../mock/export_even/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv"
 )
 
-my_alpha_chao1_div_contigs_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv"
+my_alpha_div_genes_files_mock_staggered = c(
+  "0.1M" = "../moc_staggered/export/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M_all" = "../mock/export_staggered/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "2M_all" = "../mock/export_staggered/map_all_reads/2M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "3M_all" = "../mock/export_staggered/map_all_reads/3M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M_all" = "../mock/export_staggered/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv"
 )
 
-my_alpha_chao1_div_genes_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv"
+my_alpha_div_genes_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M" = "../soil/export/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M" = "../soil/export/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "8M" = "../soil/export/8M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "12M" = "../soil/export/12M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "complete" = "../soil/export/all_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/alpha_div/gene_abundance/alpha_richness.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/alpha_div/gene_abundance/alpha_richness.tsv"
 )
 
+# # Alpha chao1 contigsd
+# my_alpha_chao1_div_contigs_files = c(
+#   "0.1M" = "./export/0.1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "0.5M" = "./export/0.5M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "1M" = "./export/1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "4M" = "./export/4M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "8M" = "./export/8M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "12M" = "./export/12M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "0.1M_all" = "./export/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "0.5M_all" = "./export/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "1M_all" = "./export/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "4M_all" = "./export/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "8M_all" = "./export/map_all_reads/8M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "12M_all" = "./export/map_all_reads/12M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv"
+# )
+# 
+# my_alpha_chao1_div_genes_files = c(
+#   "0.1M" = "./export/0.1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "0.5M" = "./export/0.5M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "1M" = "./export/1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "4M" = "./export/4M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "8M" = "./export/8M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "12M" = "./export/12M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "0.1M_all" = "./export/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "0.5M_all" = "./export/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "1M_all" = "./export/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "4M_all" = "./export/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "8M_all" = "./export/map_all_reads/8M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "12M_all" = "./export/map_all_reads/12M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv"
+# )
+# 
+# my_alpha_chao1_div_contigs_files_rock = c(
+#   "0.1M" = "../rock_microbiome/export/0.1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "0.5M" = "../rock_microbiome/export/0.5M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "1M" = "../rock_microbiome/export/1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "4M" = "../rock_microbiome/export/4M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "8M" = "../rock_microbiome/export/8M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "12M" = "../rock_microbiome/export/12M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "complete" = "../rock_microbiome/export/all_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv",
+#   "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/alpha_div/contig_abundance/alpha_chao1.tsv"
+# )
+# 
+# my_alpha_chao1_div_genes_files_rock = c(
+#   "0.1M" = "../rock_microbiome/export/0.1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "0.5M" = "../rock_microbiome/export/0.5M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "1M" = "../rock_microbiome/export/1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "4M" = "../rock_microbiome/export/4M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "8M" = "../rock_microbiome/export/8M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "12M" = "../rock_microbiome/export/12M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "complete" = "../rock_microbiome/export/all_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv",
+#   "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/alpha_div/gene_abundance/alpha_chao1.tsv"
+# )
+
+# tax files L6 relative
 my_tax_files_china = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv"
+  "0.1M" = "./export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M" = "./export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M" = "./export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M" = "./export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "8M" = "./export/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "12M" = "./export/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv"
 )
 
 my_tax_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv"
 )
+
+my_tax_files_mock = c(
+  "0.1M" = "../mock/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M" = "../mock/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "2M" = "../mock/export/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "3M" = "../mock/export/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M" = "../mock/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "complete" = "../mock/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv"
+)
+
+my_tax_files_mock_even = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M" = "../mock_even/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "2M" = "../mock_even/export/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "3M" = "../mock_even/export/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M" = "../mock_even/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "complete" = "../mock_even/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv"
+)
+
+my_tax_files_mock_staggered = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv"
+)
+
+my_tax_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M" = "../soil/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M" = "../soil/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "8M" = "../soil/export/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "12M" = "../soil/export/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "complete" = "../soil/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L6.tsv"
+)
+
+# Tax files relative L7
 my_tax_files_china_species = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv"
+  "0.1M" = "./export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M" = "./export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M" = "./export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M" = "./export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "8M" = "./export/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "12M" = "./export/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv"
 )
 
 my_tax_files_rock_species = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv"
 )
 
+my_tax_files_mock_species = c(
+  "0.1M" = "../mock/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M" = "../mock/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "2M" = "../mock/export/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "3M" = "../mock/export/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M" = "../mock/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "complete" = "../mock/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv"
+)
+
+my_tax_files_mock_even_species = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M" = "../mock_even/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "2M" = "../mock_even/export/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "3M" = "../mock_even/export/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M" = "../mock_even/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "complete" = "../mock_even/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv"
+)
+
+my_tax_files_mock_staggered_species = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv"
+)
+
+my_tax_files_soil_species = c(
+  "0.1M" = "../soil/export/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M" = "../soil/export/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M" = "../soil/export/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "8M" = "../soil/export/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "12M" = "../soil/export/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "complete" = "../soil/export/all_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/relative/feature_table_L7.tsv"
+)
+
+
+## Tax files absolute L6
 my_tax_files_china_counts = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv"
+  "0.1M" = "./export/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M" = "./export/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M" = "./export/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M" = "./export/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "8M" = "./export/8M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "12M" = "./export/12M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv"
 )
 
 my_tax_files_rock_counts = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv"
 )
 
+my_tax_files_mock_counts = c(
+  "0.1M" = "../mock/export/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M" = "../mock/export/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "2M" = "../mock/export/2M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "3M" = "../mock/export/3M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M" = "../mock/export/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "complete" = "../mock/export/all_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv"
+)
+
+my_tax_files_mock_even_counts = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M" = "../mock_even/export/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "2M" = "../mock_even/export/2M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "3M" = "../mock_even/export/3M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M" = "../mock_even/export/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "complete" = "../mock_even/export/all_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv"
+)
+
+my_tax_files_mock_staggered_counts = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv"
+)
+
+my_tax_files_soil_counts = c(
+  "0.1M" = "../soil/export/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M" = "../soil/export/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M" = "../soil/export/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "8M" = "../soil/export/8M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "12M" = "../soil/export/12M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "complete" = "../soil/export/all_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/all/absolute/feature_table_L6.tsv"
+)
+
+## MAGs files
 my_mags_files_china = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/binning/metabat2/out_checkm.txt",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/binning/metabat2/out_checkm.txt",
-  "1M" = "./human_gut_microbiome/1M_clusters/binning/metabat2/out_checkm.txt",
-  "4M" = "./human_gut_microbiome/4M_clusters/binning/metabat2/out_checkm.txt",
-  "8M" = "./human_gut_microbiome/8M_clusters/binning/metabat2/out_checkm.txt",
-  "12M" = "./human_gut_microbiome/12M_clusters/binning/metabat2/out_checkm.txt",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/binning/metabat2/out_checkm.txt",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/binning/metabat2/out_checkm.txt",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/binning/metabat2/out_checkm.txt",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/binning/metabat2/out_checkm.txt",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/binning/metabat2/out_checkm.txt",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/binning/metabat2/out_checkm.txt"
+  "0.1M" = "./export/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M" = "./export/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M" = "./export/1M_clusters/binning/metabat2/out_checkm.txt",
+  "4M" = "./export/4M_clusters/binning/metabat2/out_checkm.txt",
+  "8M" = "./export/8M_clusters/binning/metabat2/out_checkm.txt",
+  "12M" = "./export/12M_clusters/binning/metabat2/out_checkm.txt",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M_all" = "./export/map_all_reads/1M_clusters/binning/metabat2/out_checkm.txt",
+  "4M_all" = "./export/map_all_reads/4M_clusters/binning/metabat2/out_checkm.txt",
+  "8M_all" = "./export/map_all_reads/8M_clusters/binning/metabat2/out_checkm.txt",
+  "12M_all" = "./export/map_all_reads/12M_clusters/binning/metabat2/out_checkm.txt"
 )
 
 my_mags_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/binning/metabat2/out_checkm.txt",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/binning/metabat2/out_checkm.txt",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/binning/metabat2/out_checkm.txt",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/binning/metabat2/out_checkm.txt",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/binning/metabat2/out_checkm.txt",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/binning/metabat2/out_checkm.txt",
-  "complete" = "./antarctic_microbiome/export/all_clusters/binning/metabat2/out_checkm.txt",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/binning/metabat2/out_checkm.txt",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/binning/metabat2/out_checkm.txt",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/binning/metabat2/out_checkm.txt",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/binning/metabat2/out_checkm.txt",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/binning/metabat2/out_checkm.txt",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/binning/metabat2/out_checkm.txt"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M" = "../rock_microbiome/export/1M_clusters/binning/metabat2/out_checkm.txt",
+  "4M" = "../rock_microbiome/export/4M_clusters/binning/metabat2/out_checkm.txt",
+  "8M" = "../rock_microbiome/export/8M_clusters/binning/metabat2/out_checkm.txt",
+  "12M" = "../rock_microbiome/export/12M_clusters/binning/metabat2/out_checkm.txt",
+  "complete" = "../rock_microbiome/export/all_clusters/binning/metabat2/out_checkm.txt",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/binning/metabat2/out_checkm.txt",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/binning/metabat2/out_checkm.txt",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/binning/metabat2/out_checkm.txt",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/binning/metabat2/out_checkm.txt"
 )
 
+my_mags_files_mock = c(
+  "0.1M" = "../mock/export/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M" = "../mock/export/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M" = "../mock/export/1M_clusters/binning/metabat2/out_checkm.txt",
+  "2M" = "../mock/export/2M_clusters/binning/metabat2/out_checkm.txt",
+  "3M" = "../mock/export/3M_clusters/binning/metabat2/out_checkm.txt",
+  "4M" = "../mock/export/4M_clusters/binning/metabat2/out_checkm.txt",
+  "complete" = "../mock/export/all_clusters/binning/metabat2/out_checkm.txt",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/binning/metabat2/out_checkm.txt",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/binning/metabat2/out_checkm.txt",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/binning/metabat2/out_checkm.txt",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/binning/metabat2/out_checkm.txt"
+)
+
+my_mags_files_mock_even = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M" = "../mock_even/export/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M" = "../mock_even/export/1M_clusters/binning/metabat2/out_checkm.txt",
+  "2M" = "../mock_even/export/2M_clusters/binning/metabat2/out_checkm.txt",
+  "3M" = "../mock_even/export/3M_clusters/binning/metabat2/out_checkm.txt",
+  "4M" = "../mock_even/export/4M_clusters/binning/metabat2/out_checkm.txt",
+  "complete" = "../mock_even/export/all_clusters/binning/metabat2/out_checkm.txt",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/binning/metabat2/out_checkm.txt",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/binning/metabat2/out_checkm.txt",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/binning/metabat2/out_checkm.txt",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/binning/metabat2/out_checkm.txt"
+)
+
+my_mags_files_mock_staggered = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M" = "../mock_staggered/export/1M_clusters/binning/metabat2/out_checkm.txt",
+  "2M" = "../mock_staggered/export/2M_clusters/binning/metabat2/out_checkm.txt",
+  "3M" = "../mock_staggered/export/3M_clusters/binning/metabat2/out_checkm.txt",
+  "4M" = "../mock_staggered/export/4M_clusters/binning/metabat2/out_checkm.txt",
+  "complete" = "../mock_staggered/export/all_clusters/binning/metabat2/out_checkm.txt",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/binning/metabat2/out_checkm.txt",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/binning/metabat2/out_checkm.txt",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/binning/metabat2/out_checkm.txt",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/binning/metabat2/out_checkm.txt"
+)
+
+my_mags_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M" = "../soil/export/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M" = "../soil/export/1M_clusters/binning/metabat2/out_checkm.txt",
+  "4M" = "../soil/export/4M_clusters/binning/metabat2/out_checkm.txt",
+  "8M" = "../soil/export/8M_clusters/binning/metabat2/out_checkm.txt",
+  "12M" = "../soil/export/12M_clusters/binning/metabat2/out_checkm.txt",
+  "complete" = "../soil/export/all_clusters/binning/metabat2/out_checkm.txt",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/binning/metabat2/out_checkm.txt",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/binning/metabat2/out_checkm.txt",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/binning/metabat2/out_checkm.txt",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/binning/metabat2/out_checkm.txt",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/binning/metabat2/out_checkm.txt",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/binning/metabat2/out_checkm.txt"
+)
+
+## KO files
 my_KO_files_china = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "0.1M_all" = "./human_gut_microbiome/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "0.5M_all" = "./human_gut_microbiome/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "1M_all" = "./human_gut_microbiome/1M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "4M_all" = "./human_gut_microbiome/4M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "8M_all" = "./human_gut_microbiome/8M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "12M_all" = "./human_gut_microbiome/12M_clusters/annotations/blastp_kegg_parsed.tsv"
-)
-
-my_COG_files_china = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/annotations/rpsblast_cog.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/annotations/rpsblast_cog.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/annotations/rpsblast_cog.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/annotations/rpsblast_cog.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/annotations/rpsblast_cog.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/annotations/rpsblast_cog.tsv",
-  "0.1M_all" = "./human_gut_microbiome/0.1M_clusters/annotations/rpsblast_cog.tsv",
-  "0.5M_all" = "./human_gut_microbiome/0.5M_clusters/annotations/rpsblast_cog.tsv",
-  "1M_all" = "./human_gut_microbiome/1M_clusters/annotations/rpsblast_cog.tsv",
-  "4M_all" = "./human_gut_microbiome/4M_clusters/annotations/rpsblast_cog.tsv",
-  "8M_all" = "./human_gut_microbiome/8M_clusters/annotations/rpsblast_cog.tsv",
-  "12M_all" = "./human_gut_microbiome/12M_clusters/annotations/rpsblast_cog.tsv"
+  "0.1M" = "./export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M" = "./export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M" = "./export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M" = "./export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "8M" = "./export/8M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "12M" = "./export/12M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.1M_all" = "./export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M_all" = "./export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M_all" = "./export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M_all" = "./export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "8M_all" = "./export/8M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "12M_all" = "./export/12M_clusters/annotations/blastp_kegg_parsed.tsv"
 )
 
 my_KO_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/annotations/blastp_kegg_parsed.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "1M_all" = "./antarctic_microbiome/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "4M_all" = "./antarctic_microbiome/export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "8M_all" = "./antarctic_microbiome/export/8M_clusters/annotations/blastp_kegg_parsed.tsv",
-  "12M_all" = "./antarctic_microbiome/export/12M_clusters/annotations/blastp_kegg_parsed.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.1M_all" = "../rock_microbiome/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M_all" = "../rock_microbiome/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M_all" = "../rock_microbiome/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M_all" = "../rock_microbiome/export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "8M_all" = "../rock_microbiome/export/8M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "12M_all" = "../rock_microbiome/export/12M_clusters/annotations/blastp_kegg_parsed.tsv"
+)
+
+my_KO_files_mock = c(
+  "0.1M" = "../mock/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M" = "../mock/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "2M" = "../mock/export/2M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "3M" = "../mock/export/3M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M" = "../mock/export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "complete" = "../mock/export/all_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.1M_all" = "../mock/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M_all" = "../mock/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M_all" = "../mock/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "2M_all" = "../mock/export/2M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "3M_all" = "../mock/export/3M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M_all" = "../mock/export/4M_clusters/annotations/blastp_kegg_parsed.tsv"
+)
+
+my_KO_files_mock_even = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M" = "../mock_even/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "2M" = "../mock_even/export/2M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "3M" = "../mock_even/export/3M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M" = "../mock_even/export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "complete" = "../mock_even/export/all_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.1M_all" = "../mock_even/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M_all" = "../mock_even/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M_all" = "../mock_even/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "2M_all" = "../mock_even/export/2M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "3M_all" = "../mock_even/export/3M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M_all" = "../mock_even/export/4M_clusters/annotations/blastp_kegg_parsed.tsv"
+)
+
+my_KO_files_mock_staggered = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.1M_all" = "../mock_staggered/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M_all" = "../mock_staggered/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M_all" = "../mock_staggered/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "2M_all" = "../mock_staggered/export/2M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "3M_all" = "../mock_staggered/export/3M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M_all" = "../mock_staggered/export/4M_clusters/annotations/blastp_kegg_parsed.tsv"
+)
+
+my_KO_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M" = "../soil/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M" = "../soil/export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "8M" = "../soil/export/8M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "12M" = "../soil/export/12M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "complete" = "../soil/export/all_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.1M_all" = "../soil/export/0.1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "0.5M_all" = "../soil/export/0.5M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "1M_all" = "../soil/export/1M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "4M_all" = "../soil/export/4M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "8M_all" = "../soil/export/8M_clusters/annotations/blastp_kegg_parsed.tsv",
+  "12M_all" = "../soil/export/12M_clusters/annotations/blastp_kegg_parsed.tsv"
+)
+
+# COG files
+my_COG_files_china = c(
+  "0.1M" = "./export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M" = "./export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M" = "./export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "4M" = "./export/4M_clusters/annotations/rpsblast_cog.tsv",
+  "8M" = "./export/8M_clusters/annotations/rpsblast_cog.tsv",
+  "12M" = "./export/12M_clusters/annotations/rpsblast_cog.tsv",
+  "0.1M_all" = "./export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M_all" = "./export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M_all" = "./export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "4M_all" = "./export/4M_clusters/annotations/rpsblast_cog.tsv",
+  "8M_all" = "./export/8M_clusters/annotations/rpsblast_cog.tsv",
+  "12M_all" = "./export/12M_clusters/annotations/rpsblast_cog.tsv"
 )
 
 my_COG_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/annotations/rpsblast_cog.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/annotations/rpsblast_cog.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/annotations/rpsblast_cog.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/annotations/rpsblast_cog.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/annotations/rpsblast_cog.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
-  "1M_all" = "./antarctic_microbiome/export/1M_clusters/annotations/rpsblast_cog.tsv",
-  "4M_all" = "./antarctic_microbiome/export/4M_clusters/annotations/rpsblast_cog.tsv",
-  "8M_all" = "./antarctic_microbiome/export/8M_clusters/annotations/rpsblast_cog.tsv",
-  "12M_all" = "./antarctic_microbiome/export/12M_clusters/annotations/rpsblast_cog.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/annotations/rpsblast_cog.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/annotations/rpsblast_cog.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/annotations/rpsblast_cog.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/annotations/rpsblast_cog.tsv",
+  "0.1M_all" = "../rock_microbiome/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M_all" = "../rock_microbiome/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M_all" = "../rock_microbiome/export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "4M_all" = "../rock_microbiome/export/4M_clusters/annotations/rpsblast_cog.tsv",
+  "8M_all" = "../rock_microbiome/export/8M_clusters/annotations/rpsblast_cog.tsv",
+  "12M_all" = "../rock_microbiome/export/12M_clusters/annotations/rpsblast_cog.tsv"
 )
 
+my_COG_files_mock = c(
+  "0.1M" =     "../mock/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M" =     "../mock/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M" =       "../mock/export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "2M" =       "../mock/export/2M_clusters/annotations/rpsblast_cog.tsv",
+  "3M" =       "../mock/export/3M_clusters/annotations/rpsblast_cog.tsv",
+  "4M" =       "../mock/export/4M_clusters/annotations/rpsblast_cog.tsv",
+  "complete" = "../mock/export/all_clusters/annotations/rpsblast_cog.tsv",
+  "0.1M_all" = "../mock/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M_all" = "../mock/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M_all" =   "../mock/export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "2M_all" =   "../mock/export/2M_clusters/annotations/rpsblast_cog.tsv",
+  "3M_all" =   "../mock/export/3M_clusters/annotations/rpsblast_cog.tsv",
+  "4M_all" =   "../mock/export/4M_clusters/annotations/rpsblast_cog.tsv"
+)
+
+my_COG_files_mock_even = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M" = "../mock_even/export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "2M" = "../mock_even/export/2M_clusters/annotations/rpsblast_cog.tsv",
+  "3M" = "../mock_even/export/3M_clusters/annotations/rpsblast_cog.tsv",
+  "4M" = "../mock_even/export/4M_clusters/annotations/rpsblast_cog.tsv",
+  "complete" = "../mock_even/export/all_clusters/annotations/rpsblast_cog.tsv",
+  "0.1M_all" = "../mock_even/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M_all" = "../mock_even/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M_all" = "../mock_even/export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "2M_all" = "../mock_even/export/2M_clusters/annotations/rpsblast_cog.tsv",
+  "3M_all" = "../mock_even/export/3M_clusters/annotations/rpsblast_cog.tsv",
+  "4M_all" = "../mock_even/export/4M_clusters/annotations/rpsblast_cog.tsv"
+)
+
+my_COG_files_mock_staggered = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/annotations/rpsblast_cog.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/annotations/rpsblast_cog.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/annotations/rpsblast_cog.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/annotations/rpsblast_cog.tsv",
+  "0.1M_all" = "../mock_staggered/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M_all" = "../mock_staggered/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M_all" = "../mock_staggered/export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "2M_all" = "../mock_staggered/export/2M_clusters/annotations/rpsblast_cog.tsv",
+  "3M_all" = "../mock_staggered/export/3M_clusters/annotations/rpsblast_cog.tsv",
+  "4M_all" = "../mock_staggered/export/4M_clusters/annotations/rpsblast_cog.tsv"
+)
+
+my_COG_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M" = "../soil/export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "4M" = "../soil/export/4M_clusters/annotations/rpsblast_cog.tsv",
+  "8M" = "../soil/export/8M_clusters/annotations/rpsblast_cog.tsv",
+  "12M" = "../soil/export/12M_clusters/annotations/rpsblast_cog.tsv",
+  "complete" = "../soil/export/all_clusters/annotations/rpsblast_cog.tsv",
+  "0.1M_all" = "../soil/export/0.1M_clusters/annotations/rpsblast_cog.tsv",
+  "0.5M_all" = "../soil/export/0.5M_clusters/annotations/rpsblast_cog.tsv",
+  "1M_all" = "../soil/export/1M_clusters/annotations/rpsblast_cog.tsv",
+  "4M_all" = "../soil/export/4M_clusters/annotations/rpsblast_cog.tsv",
+  "8M_all" = "../soil/export/8M_clusters/annotations/rpsblast_cog.tsv",
+  "12M_all" = "../soil/export/12M_clusters/annotations/rpsblast_cog.tsv"
+)
+
+# Gene abundance
 my_gene_abundance_files_china = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/gene_abundance/merged_gene_abundance.tsv"
+  "0.1M" = "./export/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M" = "./export/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M" = "./export/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M" = "./export/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "8M" = "./export/8M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "12M" = "./export/12M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/gene_abundance/merged_gene_abundance.tsv"
 )
 
 my_gene_abundance_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/gene_abundance/merged_gene_abundance.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/gene_abundance/merged_gene_abundance.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/gene_abundance/merged_gene_abundance.tsv"
 )
 
+my_gene_abundance_files_mock = c(
+  "0.1M" = "../mock/export/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M" = "../mock/export/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "2M" = "../mock/export/2M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "3M" = "../mock/export/3M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M" = "../mock/export/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "complete" = "../mock/export/all_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/gene_abundance/merged_gene_abundance.tsv"
+)
+
+my_gene_abundance_files_mock_even = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M" = "../mock_even/export/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "2M" = "../mock_even/export/2M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "3M" = "../mock_even/export/3M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M" = "../mock_even/export/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "complete" = "../mock_even/export/all_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/gene_abundance/merged_gene_abundance.tsv"
+)
+
+my_gene_abundance_files_mock_staggered = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/gene_abundance/merged_gene_abundance.tsv"
+)
+
+my_gene_abundance_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M" = "../soil/export/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M" = "../soil/export/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "8M" = "../soil/export/8M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "12M" = "../soil/export/12M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "complete" = "../soil/export/all_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/gene_abundance/merged_gene_abundance.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/gene_abundance/merged_gene_abundance.tsv"
+)
+
+# Feature tables
 my_ft_files_china = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/annotations/taxonomy_consensus/feature_table.tsv"
+  "0.1M" = "./export/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M" = "./export/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M" = "./export/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M" = "./export/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "8M" = "./export/8M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "12M" = "./export/12M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/feature_table.tsv"
 )
 
 my_ft_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/feature_table.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/feature_table.tsv"
 )
 
+my_ft_files_mock = c(
+  "0.1M" = "../mock/export/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M" = "../mock/export/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "2M" = "../mock/export/2M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "3M" = "../mock/export/3M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M" = "../mock/export/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "complete" = "../mock/export/all_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv"
+)
+
+my_ft_files_mock_even = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M" = "../mock_even/export/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "2M" = "../mock_even/export/2M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "3M" = "../mock_even/export/3M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M" = "../mock_even/export/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "complete" = "../mock_even/export/all_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv"
+)
+
+my_ft_files_mock_staggered = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv"
+)
+
+my_ft_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M" = "../soil/export/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M" = "../soil/export/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "8M" = "../soil/export/8M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "12M" = "../soil/export/12M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "complete" = "../soil/export/all_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/annotations/taxonomy_consensus/feature_table.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/annotations/taxonomy_consensus/feature_table.tsv"
+)
+
+## Link bins
 my_link_files_china = c(
-  "0.1M" = "./human_gut_microbiome/0.1M_clusters/annotations/link_contig_to_gene.tsv",
-  "0.5M" = "./human_gut_microbiome/0.5M_clusters/annotations/link_contig_to_gene.tsv",
-  "1M" = "./human_gut_microbiome/1M_clusters/annotations/link_contig_to_gene.tsv",
-  "4M" = "./human_gut_microbiome/4M_clusters/annotations/link_contig_to_gene.tsv",
-  "8M" = "./human_gut_microbiome/8M_clusters/annotations/link_contig_to_gene.tsv",
-  "12M" = "./human_gut_microbiome/12M_clusters/annotations/link_contig_to_gene.tsv",
-  "0.1M_all" = "./human_gut_microbiome/map_all_reads/0.1M_clusters/annotations/link_contig_to_gene.tsv",
-  "0.5M_all" = "./human_gut_microbiome/map_all_reads/0.5M_clusters/annotations/link_contig_to_gene.tsv",
-  "1M_all" = "./human_gut_microbiome/map_all_reads/1M_clusters/annotations/link_contig_to_gene.tsv",
-  "4M_all" = "./human_gut_microbiome/map_all_reads/4M_clusters/annotations/link_contig_to_gene.tsv",
-  "8M_all" = "./human_gut_microbiome/map_all_reads/8M_clusters/annotations/link_contig_to_gene.tsv",
-  "12M_all" = "./human_gut_microbiome/map_all_reads/12M_clusters/annotations/link_contig_to_gene.tsv"
+  "0.1M" = "./export/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M" = "./export/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M" = "./export/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M" = "./export/4M_clusters/annotations/link_contig_to_gene.tsv",
+  "8M" = "./export/8M_clusters/annotations/link_contig_to_gene.tsv",
+  "12M" = "./export/12M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.1M_all" = "./export/map_all_reads/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M_all" = "./export/map_all_reads/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M_all" = "./export/map_all_reads/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M_all" = "./export/map_all_reads/4M_clusters/annotations/link_contig_to_gene.tsv",
+  "8M_all" = "./export/map_all_reads/8M_clusters/annotations/link_contig_to_gene.tsv",
+  "12M_all" = "./export/map_all_reads/12M_clusters/annotations/link_contig_to_gene.tsv"
 )
 
 my_link_files_rock = c(
-  "0.1M" = "./antarctic_microbiome/export/0.1M_clusters/annotations/link_contig_to_gene.tsv",
-  "0.5M" = "./antarctic_microbiome/export/0.5M_clusters/annotations/link_contig_to_gene.tsv",
-  "1M" = "./antarctic_microbiome/export/1M_clusters/annotations/link_contig_to_gene.tsv",
-  "4M" = "./antarctic_microbiome/export/4M_clusters/annotations/link_contig_to_gene.tsv",
-  "8M" = "./antarctic_microbiome/export/8M_clusters/annotations/link_contig_to_gene.tsv",
-  "12M" = "./antarctic_microbiome/export/12M_clusters/annotations/link_contig_to_gene.tsv",
-  "complete" = "./antarctic_microbiome/export/all_clusters/annotations/link_contig_to_gene.tsv",
-  "0.1M_all" = "./antarctic_microbiome/export/map_all_reads/0.1M_clusters/annotations/link_contig_to_gene.tsv",
-  "0.5M_all" = "./antarctic_microbiome/export/map_all_reads/0.5M_clusters/annotations/link_contig_to_gene.tsv",
-  "1M_all" = "./antarctic_microbiome/export/map_all_reads/1M_clusters/annotations/link_contig_to_gene.tsv",
-  "4M_all" = "./antarctic_microbiome/export/map_all_reads/4M_clusters/annotations/link_contig_to_gene.tsv",
-  "8M_all" = "./antarctic_microbiome/export/map_all_reads/8M_clusters/annotations/link_contig_to_gene.tsv",
-  "12M_all" = "./antarctic_microbiome/export/map_all_reads/12M_clusters/annotations/link_contig_to_gene.tsv"
+  "0.1M" = "../rock_microbiome/export/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M" = "../rock_microbiome/export/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M" = "../rock_microbiome/export/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M" = "../rock_microbiome/export/4M_clusters/annotations/link_contig_to_gene.tsv",
+  "8M" = "../rock_microbiome/export/8M_clusters/annotations/link_contig_to_gene.tsv",
+  "12M" = "../rock_microbiome/export/12M_clusters/annotations/link_contig_to_gene.tsv",
+  "complete" = "../rock_microbiome/export/all_clusters/annotations/link_contig_to_gene.tsv",
+  "0.1M_all" = "../rock_microbiome/export/map_all_reads/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M_all" = "../rock_microbiome/export/map_all_reads/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M_all" = "../rock_microbiome/export/map_all_reads/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M_all" = "../rock_microbiome/export/map_all_reads/4M_clusters/annotations/link_contig_to_gene.tsv",
+  "8M_all" = "../rock_microbiome/export/map_all_reads/8M_clusters/annotations/link_contig_to_gene.tsv",
+  "12M_all" = "../rock_microbiome/export/map_all_reads/12M_clusters/annotations/link_contig_to_gene.tsv"
+)
+
+my_link_files_mock = c(
+  "0.1M" = "../mock/export/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M" = "../mock/export/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M" = "../mock/export/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "2M" = "../mock/export/2M_clusters/annotations/link_contig_to_gene.tsv",
+  "3M" = "../mock/export/3M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M" = "../mock/export/4M_clusters/annotations/link_contig_to_gene.tsv",
+  "complete" = "../mock/export/all_clusters/annotations/link_contig_to_gene.tsv",
+  "0.1M_all" = "../mock/export/map_all_reads/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M_all" = "../mock/export/map_all_reads/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M_all" = "../mock/export/map_all_reads/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "2M_all" = "../mock/export/map_all_reads/2M_clusters/annotations/link_contig_to_gene.tsv",
+  "3M_all" = "../mock/export/map_all_reads/3M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M_all" = "../mock/export/map_all_reads/4M_clusters/annotations/link_contig_to_gene.tsv"
+)
+
+my_link_files_mock_even = c(
+  "0.1M" = "../mock_even/export/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M" = "../mock_even/export/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M" = "../mock_even/export/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "2M" = "../mock_even/export/2M_clusters/annotations/link_contig_to_gene.tsv",
+  "3M" = "../mock_even/export/3M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M" = "../mock_even/export/4M_clusters/annotations/link_contig_to_gene.tsv",
+  "complete" = "../mock_even/export/all_clusters/annotations/link_contig_to_gene.tsv",
+  "0.1M_all" = "../mock_even/export/map_all_reads/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M_all" = "../mock_even/export/map_all_reads/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M_all" = "../mock_even/export/map_all_reads/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "2M_all" = "../mock_even/export/map_all_reads/2M_clusters/annotations/link_contig_to_gene.tsv",
+  "3M_all" = "../mock_even/export/map_all_reads/3M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M_all" = "../mock_even/export/map_all_reads/4M_clusters/annotations/link_contig_to_gene.tsv"
+)
+
+my_link_files_mock_staggered = c(
+  "0.1M" = "../mock_staggered/export/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M" = "../mock_staggered/export/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M" = "../mock_staggered/export/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "2M" = "../mock_staggered/export/2M_clusters/annotations/link_contig_to_gene.tsv",
+  "3M" = "../mock_staggered/export/3M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M" = "../mock_staggered/export/4M_clusters/annotations/link_contig_to_gene.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/annotations/link_contig_to_gene.tsv",
+  "0.1M_all" = "../mock_staggered/export/map_all_reads/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M_all" = "../mock_staggered/export/map_all_reads/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M_all" = "../mock_staggered/export/map_all_reads/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "2M_all" = "../mock_staggered/export/map_all_reads/2M_clusters/annotations/link_contig_to_gene.tsv",
+  "3M_all" = "../mock_staggered/export/map_all_reads/3M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M_all" = "../mock_staggered/export/map_all_reads/4M_clusters/annotations/link_contig_to_gene.tsv"
+)
+
+
+my_link_files_soil = c(
+  "0.1M" = "../soil/export/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M" = "../soil/export/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M" = "../soil/export/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M" = "../soil/export/4M_clusters/annotations/link_contig_to_gene.tsv",
+  "8M" = "../soil/export/8M_clusters/annotations/link_contig_to_gene.tsv",
+  "12M" = "../soil/export/12M_clusters/annotations/link_contig_to_gene.tsv",
+  "complete" = "../soil/export/all_clusters/annotations/link_contig_to_gene.tsv",
+  "0.1M_all" = "../soil/export/map_all_reads/0.1M_clusters/annotations/link_contig_to_gene.tsv",
+  "0.5M_all" = "../soil/export/map_all_reads/0.5M_clusters/annotations/link_contig_to_gene.tsv",
+  "1M_all" = "../soil/export/map_all_reads/1M_clusters/annotations/link_contig_to_gene.tsv",
+  "4M_all" = "../soil/export/map_all_reads/4M_clusters/annotations/link_contig_to_gene.tsv",
+  "8M_all" = "../soil/export/map_all_reads/8M_clusters/annotations/link_contig_to_gene.tsv",
+  "12M_all" = "../soil/export/map_all_reads/12M_clusters/annotations/link_contig_to_gene.tsv"
+)
+
+## rpoB richness files.
+my_rpob_richness_files_china = c(
+  "0.1M"  = "./export/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M"  = "./export/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M"  = "./export/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M"  = "./export/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "8M"  = "./export/8M_cluster/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "12M"  = "./export/12M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.1M_all"  = "./export/map_all_reads/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M_all"  = "./export/map_all_reads/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M_all"  = "./export/map_all_reads/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M_all"  = "./export/map_all_reads/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "8M_all"  = "./export/map_all_reads/8M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "12M_all"  = "./export/map_all_reads/12M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv"
+)
+
+my_rpob_richness_files_rock_microbiome = c(
+  "0.1M"  = "../rock_microbiome/export/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M"  = "../rock_microbiome/export/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M"  = "../rock_microbiome/export/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M"  = "../rock_microbiome/export/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "8M"  = "../rock_microbiome/export/8M_cluster/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "12M"  = "../rock_microbiome/export/12M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "complete"  = "../rock_microbiome/export/all_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.1M_all"  = "../rock_microbiome/export/map_all_reads/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M_all"  = "../rock_microbiome/export/map_all_reads/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M_all"  = "../rock_microbiome/export/map_all_reads/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M_all"  = "../rock_microbiome/export/map_all_reads/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "8M_all"  = "../rock_microbiome/export/map_all_reads/8M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "12M_all"  = "../rock_microbiome/export/map_all_reads/12M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv"
+)
+
+my_rpob_richness_files_mock = c(
+  "0.1M"  = "../mock/export/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M"  = "../mock/export/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M"  = "../mock/export/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "2M"  = "../mock/export/2M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "3M"  = "../mock/export/3M_cluster/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M"  = "../mock/export/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "complete" = "../mock/export/all_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.1M_all"  = "../mock/export/map_all_reads/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M_all"  = "../mock/export/map_all_reads/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M_all"  = "../mock/export/map_all_reads/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "2M_all"  = "../mock/export/map_all_reads/2M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "3M_all"  = "../mock/export/map_all_reads/3M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M_all"  = "../mock/export/map_all_reads/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv"
+)
+
+my_rpob_richness_files_mock_even = c(
+  "0.1M"  = "../mock_even/export/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M"  = "../mock_even/export/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M"  = "../mock_even/export/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "2M"  = "../mock_even/export/2M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "3M"  = "../mock_even/export/3M_cluster/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M"  = "../mock_even/export/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "complete" = "../mock_even/export/all_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.1M_all"  = "../mock_even/export/map_all_reads/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M_all"  = "../mock_even/export/map_all_reads/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M_all"  = "../mock_even/export/map_all_reads/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "2M_all"  = "../mock_even/export/map_all_reads/2M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "3M_all"  = "../mock_even/export/map_all_reads/3M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M_all"  = "../mock_even/export/map_all_reads/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv"
+)
+
+my_rpob_richness_files_mock_staggered = c(
+  "0.1M"  = "../mock_staggered/export/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M"  = "../mock_staggered/export/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M"  = "../mock_staggered/export/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "2M"  = "../mock_staggered/export/2M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "3M"  = "../mock_staggered/export/3M_cluster/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M"  = "../mock_staggered/export/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "complete" = "../mock_staggered/export/all_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.1M_all"  = "../mock_staggered/export/map_all_reads/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M_all"  = "../mock_staggered/export/map_all_reads/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M_all"  = "../mock_staggered/export/map_all_reads/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "2M_all"  = "../mock_staggered/export/map_all_reads/2M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "3M_all"  = "../mock_staggered/export/map_all_reads/3M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M_all"  = "../mock_staggered/export/map_all_reads/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv"
+)
+
+my_rpob_richness_files_soil = c(
+  "0.1M"  = "../soil/export/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M"  = "../soil/export/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M"  = "../soil/export/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M"  = "../soil/export/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "8M"  = "../soil/export/8M_cluster/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "12M"  = "../soil/export/12M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "complete" = "../soil/export/all_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.1M_all"  = "../soil/export/map_all_reads/0.1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "0.5M_all"  = "../soil/export/map_all_reads/0.5M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "1M_all"  = "../soil/export/map_all_reads/1M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "4M_all"  = "../soil/export/map_all_reads/4M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "8M_all"  = "../soil/export/map_all_reads/8M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv",
+  "12M_all"  = "../soil/export/map_all_reads/12M_clusters/alpha_div/rpob_abundance/alpha_richness.tsv"
 )
 
 get_rpobtax_abundance_as_df = function(gene_abundance_files, cog_files, ft_table_files, link_files, mapping_file=NULL){
@@ -666,6 +1869,8 @@ get_coords_as_df = function(coords_files){
   for(i in 1:length(coords_files)){
     coords_file = coords_files[i][[1]]
     curr_name = names(coords_files[i])
+    print(curr_name)
+    print(coords_file)
     
     curr_file = file(coords_file)
     open(curr_file)
@@ -814,7 +2019,7 @@ get_alphadiv_as_df = function(alpha_div_files, mapping=mapping){
   for(y in 1:length(alpha_div_files)){
     alpha_div_file = alpha_div_files[y]
     prefix = names(alpha_div_file)
-    tAlpha = data.frame(fread(alpha_div_file, sep="\t", header=T, fill=TRUE), check.names=FALSE)
+    tAlpha = data.frame(fread(alpha_div_file, fill=TRUE, sep="\t", header=T), check.names=FALSE)
     tAlpha = tAlpha[!tAlpha$depth %in% c("taxonomy"),]
     
     j = 2
